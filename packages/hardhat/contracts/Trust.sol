@@ -9,6 +9,8 @@ contract Trust {
     address owner;
     IERC20 token;
 
+    event employ(address developer, uint amount);
+
     constructor(address _token) {
         owner = msg.sender;
         token = IERC20(_token);
@@ -53,6 +55,7 @@ contract Trust {
         balances[_dev] += amount;
         pot += amount;
         user2dev[msg.sender] = _dev;
+        emit employ(_dev, amount);
     }
 
     function claim() external {
