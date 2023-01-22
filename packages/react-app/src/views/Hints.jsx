@@ -23,7 +23,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
           className="highlight"
           style={{ marginLeft: 4, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4, fontWeight: "bolder" }}
         >
-          packages/truffle/contracts
+          packages/hardhat/contracts
         </span>
       </div>
 
@@ -172,7 +172,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
           className="highlight"
           style={{ marginLeft: 4, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4, fontWeight: "bolder" }}
         >
-          packages/truffle/truffle-config.js
+          packages/hardhat/hardhat.config.js
         </span>
         and running
         <span
@@ -196,7 +196,7 @@ export default function Hints({ yourLocalBalance, mainnetProvider, price, addres
           className="highlight"
           style={{ marginLeft: 4, /* backgroundColor: "#f9f9f9", */ padding: 4, borderRadius: 4, fontWeight: "bolder" }}
         >
-          packages/truffle
+          packages/hardhat
         </span>
         <div style={{ marginTop: 8 }}>
           (use{" "}

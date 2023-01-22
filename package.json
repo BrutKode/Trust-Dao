@@ -14,29 +14,32 @@
     "react-app:eject": "yarn workspace @scaffold-eth/react-app eject",
     "react-app:start": "yarn workspace @scaffold-eth/react-app start",
     "react-app:test": "yarn workspace @scaffold-eth/react-app test",
+    "react-app:lint": "yarn workspace @scaffold-eth/react-app lint",
     "build": "yarn workspace @scaffold-eth/react-app build --max-old-space-size=12288",
     "prettier": "yarn workspace @scaffold-eth/react-app prettier",
-    "chain": "yarn workspace @scaffold-eth/truffle ganache",
-    "compile": "yarn workspace @scaffold-eth/truffle compile",
-    "deploy": "yarn workspace @scaffold-eth/truffle migrate",
-    "test": "yarn workspace @scaffold-eth/truffle test",
-    "fork": "ganache --fork https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad",
-    "node": "yarn workspace @scaffold-eth/truffle ganache",
+    "chain": "yarn workspace @scaffold-eth/hardhat chain",
+    "fork": "yarn workspace @scaffold-eth/hardhat fork",
+    "node": "yarn workspace @scaffold-eth/hardhat chain",
+    "test": "yarn workspace @scaffold-eth/hardhat test",
     "start": "yarn workspace @scaffold-eth/react-app start",
-    "watch": "yarn workspace @scaffold-eth/truffle watch",
-    "accounts": "yarn workspace @scaffold-eth/truffle accounts",
-    "balance": "yarn workspace @scaffold-eth/truffle balance",
-    "verify": "yarn workspace @scaffold-eth/truffle verify",
+    "compile": "yarn workspace @scaffold-eth/hardhat compile",
+    "deploy": "yarn workspace @scaffold-eth/hardhat deploy",
+    "verify": "yarn workspace @scaffold-eth/hardhat verify",
+    "watch": "yarn workspace @scaffold-eth/hardhat watch",
+    "accounts": "yarn workspace @scaffold-eth/hardhat accounts",
+    "balance": "yarn workspace @scaffold-eth/hardhat balance",
+    "send": "yarn workspace @scaffold-eth/hardhat send",
     "ipfs": "yarn workspace @scaffold-eth/react-app ipfs",
     "surge": "yarn workspace @scaffold-eth/react-app surge",
     "s3": "yarn workspace @scaffold-eth/react-app s3",
     "ship": "yarn workspace @scaffold-eth/react-app ship",
-    "generate": "yarn workspace @scaffold-eth/truffle generate",
-    "account": "yarn workspace @scaffold-eth/truffle account",
-    "wallet": "yarn workspace @scaffold-eth/truffle wallet",
-    "fundedwallet": "yarn workspace @scaffold-eth/truffle fundedwallet",
-    "flatten": "yarn workspace @scaffold-eth/truffle flatten",
-    "clean": "yarn workspace @scaffold-eth/truffle clean",
+    "generate": "yarn workspace @scaffold-eth/hardhat generate",
+    "account": "yarn workspace @scaffold-eth/hardhat account",
+    "mineContractAddress": "cd packages/hardhat && npx hardhat mineContractAddress",
+    "wallet": "cd packages/hardhat && npx hardhat wallet",
+    "fundedwallet": "cd packages/hardhat && npx hardhat fundedwallet",
+    "flatten": "cd packages/hardhat && npx hardhat flatten",
+    "clean": "cd packages/hardhat && npx hardhat clean",
     "run-graph-node": "yarn workspace @scaffold-eth/services run-graph-node",
     "remove-graph-node": "yarn workspace @scaffold-eth/services remove-graph-node",
     "clean-graph-node": "yarn workspace @scaffold-eth/services clean-graph-node",
@@ -49,7 +52,8 @@
     "deploy-and-graph": "yarn deploy && yarn graph-ship-local",
     "theme": "yarn workspace @scaffold-eth/react-app theme",
     "watch-theme": "yarn workspace @scaffold-eth/react-app watch",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "workspaces": {
     "packages": [
@@ -58,11 +62,32 @@
     "nohoist": [
       "**/@graphprotocol/graph-ts",
       "**/@graphprotocol/graph-ts/**",
-      "**/truffle",
-      "**/truffle/**"
+      "**/hardhat",
+      "**/hardhat/**",
+      "**/hardhat-ts",
+      "**/hardhat-ts/**"
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.2"
-  }
+    "husky": "^7.0.2",
+    "lint-staged": "^13.0.3"
+  },
+  "lint-staged": {
+    "packages/react-app/src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "description": "> everything you need to build on Ethereum! 🚀",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrutKode/Trust-Dao.git"
+  },
+  "author": "BrutKode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrutKode/Trust-Dao/issues"
+  },
+  "homepage": "https://github.com/BrutKode/Trust-Dao#readme"
 }

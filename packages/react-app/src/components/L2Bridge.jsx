@@ -6,7 +6,7 @@ import { useContractLoader, useOnBlock } from "eth-hooks";
 import { NETWORKS } from "../constants";
 import { Transactor } from "../helpers";
 
-/**
+/** 
 This is a component for bridging between L1 & L2
 Currently it supports Testnet deposits for Arbitrum & Optimism
 
@@ -59,7 +59,7 @@ export default function L2ArbitrumBridge({ address, userSigner }) {
     setProviders();
   }, [rollup, activeConfig.L1, activeConfig.L2]);
 
-  const contracts = useContractLoader(userSigner, { externalContracts: L1BridgeMetadata, truffleContracts: {} });
+  const contracts = useContractLoader(userSigner, { externalContracts: L1BridgeMetadata, hardhatContracts: {} });
 
   useOnBlock(L1Provider, async () => {
     console.log(`⛓ A new mainnet block is here: ${L1Provider._lastBlockNumber}`);
