@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 contract Trust {
 
     uint256 pot;
-    address owner;
+    address public owner;
     IERC20 token;
 
     event employ(address developer, uint amount);
