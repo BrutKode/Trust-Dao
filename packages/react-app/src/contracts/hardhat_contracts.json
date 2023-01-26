@@ -1,11 +1,11 @@
 {
-  "31337": {
-    "localhost": {
-      "name": "localhost",
-      "chainId": "31337",
+  "1287": {
+    "moonbaseAlpha": {
+      "name": "moonbaseAlpha",
+      "chainId": "1287",
       "contracts": {
         "Marshal": {
-          "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          "address": "0x34ED5eBb087917A321Da2733f1eA16D39d715c6B",
           "abi": [
             {
               "inputs": [],
@@ -324,7 +324,7 @@
           ]
         },
         "Trust": {
-          "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+          "address": "0x55184dDe049aa0d081F4677C0A61c34571982cfF",
           "abi": [
             {
               "inputs": [
