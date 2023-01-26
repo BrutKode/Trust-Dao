@@ -1,23 +1,9 @@
-import { Button, Card, DatePicker, Divider, Input, Progress, Slider, Spin, Switch } from "antd";
+import { Button, Divider, Input } from "antd";
 import React, { useState } from "react";
-import { utils } from "ethers";
-import { SyncOutlined } from "@ant-design/icons";
 
-import Typewriter from "typewriter-effect";
+import { Address } from "../components";
 
-import { Address, Balance, Events } from "../components";
-
-export default function ExampleUI({
-  purpose,
-  address,
-  mainnetProvider,
-  localProvider,
-  yourLocalBalance,
-  price,
-  tx,
-  readContracts,
-  writeContracts,
-}) {
+export default function ExampleUI({ address, mainnetProvider, tx, readContracts, writeContracts }) {
   const [developer, setDeveloper] = useState("loading...");
   const [amount, setAmount] = useState("loading...");
   const [user, setUser] = useState("loading...");
