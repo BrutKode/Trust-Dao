@@ -41,30 +41,8 @@ export default function ExampleUI({
     background: "linear-gradient(rgba(0, 255, 255, 0.3), rgba(100, 0, 255, 0.2))",
   };
 
-  const myFont = {
-    "margin-top": "20px",
-    "font-family": "monospace",
-    "font-size": "xxx-large",
-  };
-
   return (
     <>
-      <h1 style={myFont}>
-        <strong>
-          <Typewriter
-            options={{
-              strings: ["Welcome to the Trust DAO!", "A DAO which is trustworthy"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </strong>
-      </h1>
-      <h3>
-        Join Us by hiring your first developer, <br /> Pay for the work they are executing and have no worries, <br />{" "}
-        Trust us and we will provide you with your requirements!
-      </h3>
-      <Divider />
       {/*
          ⚙️ Here is an example UI that displays and sets the purpose in your smart contract:
        */}

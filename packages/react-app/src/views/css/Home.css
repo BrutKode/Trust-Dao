@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+.main {
+  padding: 0px;
+}
+
+.heading {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: "Aboreto", cursive;
+  font-size: 50px;
+}
+
+.left-align {
+  text-align: left;
+}
